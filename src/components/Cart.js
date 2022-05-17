@@ -22,7 +22,7 @@ function Cart() {
           {cart.map((item) => {
             return (
               <Card key={item.id} style={{ width: "18rem", margin: "1rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" style={{width:'100px',height:'100px'}} src={item.image} />
                 <Card.Body>
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>Quantity:{item.quantity}</Card.Text>

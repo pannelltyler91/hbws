@@ -24,7 +24,7 @@ function Store() {
                 <Card.Title>{item.title}</Card.Title>
               <Card.Img variant="top" style={{width:'100px',height:'100px'}}src={item.image} />
                 <Card.Text>Price:${item.pricePerItem}</Card.Text>
-                <Button onClick={() => {dispatch(addToCart({name:item.title,id:item.id,quantity:item.quantity+1,price:item.pricePerItem}))} }>+</Button>
+                <Button onClick={() => {dispatch(addToCart({name:item.title,id:item.id,quantity:item.quantity+1,price:item.pricePerItem,image:item.image}))} }>+</Button>
               </Card.Body>
             </Card>
           );
