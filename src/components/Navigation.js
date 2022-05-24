@@ -5,8 +5,10 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import { BsFillCartCheckFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 function Navigation() {
+    const cartCount = useSelector((state) => state.inventory.cartCount);
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark">
@@ -26,11 +28,11 @@ function Navigation() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
               <NavDropdown title="Jewelry" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/store">All</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Rings</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <Link to="/store">All</Link>
+                <Link to="#action/3.2">Rings</Link>
+                <Link to="#action/3.3">
                   Necklaces
-                </NavDropdown.Item>
+                </Link>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Watches</NavDropdown.Item>
               </NavDropdown>
@@ -47,7 +49,7 @@ function Navigation() {
                   textDecoration: "none",
                 }}
               >
-                <BsFillCartCheckFill />
+               <BsFillCartCheckFill/>({cartCount})
               </Link>
             </Nav>
           </Navbar.Collapse>
