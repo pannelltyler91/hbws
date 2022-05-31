@@ -80,7 +80,7 @@ export const inventorySlice = createSlice({
       console.log(finalAnswer.cart);
       
 
-      fetch("http://localhost:3001/create_checkout_session", {
+      fetch("http://localhost:4242/create_checkout_session", {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

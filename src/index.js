@@ -13,7 +13,7 @@ const store = configureStore({
   reducer:{
     inventory:inventoryReducer
   }
-})
+});
 
 
 ReactDOM.render(
